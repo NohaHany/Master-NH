@@ -17,10 +17,10 @@ maintainers:
     email: alexandre.nuttinck@cetic.be
     url: https://github.com/alexnuttinck
 dependencies:
- ## - name: zookeeper
-  ##  version: 5.23.0
-   ## repository: https://charts.bitnami.com/bitnami
-   ## condition: zookeeper.enabled
+  - name: zookeeper
+    version: 5.23.0
+    repository: https://charts.bitnami.com/bitnami
+    condition: zookeeper.enabled
   - name: nifi-registry
     alias: registry
     version: 0.1.1
