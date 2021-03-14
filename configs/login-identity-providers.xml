@@ -75,16 +75,16 @@
         <property name="TLS - Truststore">/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Release.Namespace}}.svc.cluster.local/truststore.jks</property>
         <property name="TLS - Truststore Password">{{.Values.auth.truststorePasswd}}</property>
         <property name="TLS - Truststore Type">JKS</property>
-        <property name="TLS - Client Auth">NONE</property>
-        <property name="TLS - Protocol">TLS</property>
-        <property name="TLS - Shutdown Gracefully">false</property>
+        <property name="TLS - Client Auth"></property>
+        <property name="TLS - Protocol"></property>
+        <property name="TLS - Shutdown Gracefully"></property>
 
         <property name="Referral Strategy">FOLLOW</property>
         <property name="Connect Timeout">10 secs</property>
         <property name="Read Timeout">10 secs</property>
         <property name="Url">{{.Values.auth.ldap.host}}</property>
         <property name="User Search Base">{{.Values.auth.ldap.searchBase}}</property>
-        <property name="User Search Filter">(cn={0})</property>
+        <property name="User Search Filter">sAMAccountName={0}</property>
         <property name="Identity Strategy">{{.Values.auth.ldap.IdentityStrategy}}</property>
         <property name="Authentication Expiration">12 hours</property>
     </provider>
