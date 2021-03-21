@@ -35,9 +35,9 @@ sts:
 
 ## Useful if using any custom secrets
 ## Pass in some secrets to use (if required)
- secrets:
+secrets:
  ## - name: myNifiSecret
- - name: nifi-secrets
+  name: nifi-secrets
    keys:
      - auth.ldap.admin
      - auth.ldap.pass
