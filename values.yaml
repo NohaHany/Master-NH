@@ -38,7 +38,7 @@ sts:
 ## Pass in some secrets to use (if required)
 secrets:
  ## - name: myNifiSecret
-  - name: nifi-ldap
+  name: nifi-ldap
   keys:
     - username
     - password
