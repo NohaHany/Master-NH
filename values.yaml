@@ -15,7 +15,7 @@ image:
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
   ##
   # pullSecret: myRegistrKeySecretName
-  pullSecret: nifisecrets
+  pullSecret: nifi-ldap
 
 securityContext:
   runAsUser: 1000
@@ -38,11 +38,11 @@ sts:
 ## Pass in some secrets to use (if required)
 secrets:
  ## - name: myNifiSecret
-  name: nifisecrets
-    keys:
-      - auth.ldap.admin
-      - auth.ldap.pass
-    mountPath: /opt/nifi/secret
+  - name: nifi-ldap
+  keys:
+    - username
+    - password
+  mountPath: /opt/nifi/secret
   # name: nifi-ldap
   #   keys:
   #    - auth.ldap.admin
