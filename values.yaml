@@ -38,10 +38,10 @@ sts:
 ## Pass in some secrets to use (if required)
 # secrets:
  ## - name: myNifiSecret
-  # name: nifi-ldap2
-  # keys:
-  #   - username
-  #   - password
+   name: nifi-ldap2
+  keys:
+    - username
+    - password
   #mountPath: /opt/nifi/secret
   # name: nifi-ldap
   #   keys:
