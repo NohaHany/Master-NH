@@ -36,18 +36,18 @@ sts:
 
 ## Useful if using any custom secrets
 ## Pass in some secrets to use (if required)
-secrets:
- ## - name: myNifiSecret
-  name: nifi-ldap2
-  keys:
-    - username
-    - password
-  mountPath: /opt/nifi/secret
-  # name: nifi-ldap
-  #   keys:
-  #    - auth.ldap.admin
-  #    - auth.ldap.pass
-  #   mountPath: /opt/nifi/secret
+# secrets:
+#  ## - name: myNifiSecret
+#   name: nifi-ldap2
+#   keys:
+#     - username
+#     - password
+#   mountPath: /opt/nifi/secret
+#   # name: nifi-ldap
+#   #   keys:
+#   #    - auth.ldap.admin
+#   #    - auth.ldap.pass
+#   #   mountPath: /opt/nifi/secret
 
 ## Useful if using any custom configmaps
 ## Pass in some configmaps to use (if required)
