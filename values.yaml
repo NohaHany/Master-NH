@@ -44,8 +44,8 @@ secrets:
   #  mountPath: /opt/nifi/secret
   name: nifi-ldap
     keys:
-     - username
-     - password
+     - auth.ldap.admin
+     - auth.ldap.pass
     mountPath: /opt/nifi/secret
 
 ## Useful if using any custom configmaps
