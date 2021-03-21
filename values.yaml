@@ -15,7 +15,7 @@ image:
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
   ##
   # pullSecret: myRegistrKeySecretName
-  pullSecret: nifi-ldap2
+  pullSecret: regcred
 
 securityContext:
   runAsUser: 1000
