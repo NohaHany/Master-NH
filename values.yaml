@@ -36,11 +36,11 @@ sts:
 
 ## Useful if using any custom secrets
 ## Pass in some secrets to use (if required)
-secrets:
-- name: mynifisecret
-  keys:
-    - key1
-    - key2
+# secrets:
+# - name: mynifisecret
+#   keys:
+#     - key1
+#     - key2
   # mountPath: /opt/nifi/nifi-current/secret
 
 ## Useful if using any custom secrets
