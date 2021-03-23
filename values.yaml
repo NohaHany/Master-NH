@@ -15,7 +15,7 @@ image:
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
   ##
   # pullSecret: myRegistrKeySecretName
-  pullSecret: regcred
+  # pullSecret: regcred
 
 securityContext:
   runAsUser: 1000
@@ -36,13 +36,13 @@ sts:
 
 ## Useful if using any custom secrets
 ## Pass in some secrets to use (if required)
-# secrets:
+ secrets:
 #  ## - name: myNifiSecret
-#   name: nifi-ldap2
-#   keys:
-#     - username
-#     - password
-#   mountPath: /opt/nifi/secret
+  name: nifi-ldap2
+  keys:
+    - username
+    - password
+   mountPath: /opt/nifi/secret
 #   # name: nifi-ldap
 #   #   keys:
 #   #    - auth.ldap.admin
@@ -262,13 +262,13 @@ terminationGracePeriodSeconds: 30
 env: []
 
 ## Extra environment variables from secrets and config maps
-envFrom: []
+ envFrom: []
 
-# envFrom:
+#  envFrom:
 #   - configMapRef:
 #       name: config-name
-#   - secretRef:
-#       name: mysecret
+  #  - secretRef:
+  #      name: regcred
 
 ## Openshift support
 ## Use the following varables in order to enable Route and Security Context Constraint creation
