@@ -271,7 +271,7 @@ terminationGracePeriodSeconds: 30
 env: []
 
 ## Extra environment variables from secrets and config maps
- envFrom: []
+envFrom: []
 
 #  envFrom:
 #   - configMapRef:
