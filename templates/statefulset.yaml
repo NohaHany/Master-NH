@@ -402,10 +402,13 @@ spec:
           - name: "flow-content"
             mountPath: /opt/nifi/data/flow.xml
             subPath: "flow.xml"
-          {{- range $secret := .Values.secrets }}
-            {{- if $secret.mountPath }}
-              {{- if $secret.keys }}
-                {{- range $key := $secret.keys }}
+          - name: "secrets"
+            mountPath: /opt/nifi/nifi-current/secret/secret.xml
+            subPath: "secret.xml"
+          # {{- range $secret := .Values.secrets }}
+          #   {{- if $secret.mountPath }}
+          #     {{- if $secret.keys }}
+          #       {{- range $key := $secret.keys }}
           - name: {{ include "apache-nifi.fullname" $ }}-{{ $secret.name }}
             mountPath: {{ $secret.mountPath }}/{{ $key }}
             subPath: {{ $key }}
