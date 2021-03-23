@@ -33,16 +33,25 @@ sts:
   serviceAccount:
     create: false
     #name: nifi
+    
+## Useful if using any custom secrets
+## Pass in some secrets to use (if required)
+secrets:
+- name: myNifiSecret
+  keys:
+    - key1
+    - key2
+  mountPath: /opt/nifi/secret
 
 ## Useful if using any custom secrets
 ## Pass in some secrets to use (if required)
- secrets:
+  # secrets:
 #  ## - name: myNifiSecret
-  name: nifi-ldap2
-  keys:
-    - username
-    - password
-  mountPath: /opt/nifi/secret
+  # name: nifi-ldap2
+  #   keys:
+  #     - username
+  #     - password
+  # mountPath: /opt/nifi/secret
 #   # name: nifi-ldap
 #   #   keys:
 #   #    - auth.ldap.admin
