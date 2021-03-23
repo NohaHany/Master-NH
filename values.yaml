@@ -42,7 +42,7 @@ sts:
   keys:
     - username
     - password
-   mountPath: /opt/nifi/secret
+  mountPath: /opt/nifi/secret
 #   # name: nifi-ldap
 #   #   keys:
 #   #    - auth.ldap.admin
